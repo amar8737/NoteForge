@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling>=1.27.0"]
+build-backend = "hatchling.build"
+
+[project]
+name = "noteforge"
+version = "0.1.0"
+description = "A Python package for generating structured notes from transcripts using LLMs."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { text = "MIT" }
+
+authors = [
+    { name = "Amar" }
+]
+
+keywords = [
+    "llm",
+    "notes",
+    "transcript",
+    "ai",
+    "markdown",
+]
+
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Typing :: Typed",
+]
+
+dependencies = [
+    "pydantic>=2.11",
+]
+
+[project.optional-dependencies]
+
+docling = [
+    "docling"
+]
+
+openai = [
+    "openai"
+]
+
+nim = [
+]
+
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "mypy",
+    "pre-commit",
+]
+
+[project.urls]
+Homepage = "https://github.com/amar8737/NoteForge"
+Repository = "https://github.com/amar8737/NoteForge"
+Issues = "https://github.com/amar8737/NoteForge/issues"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/noteforge"]
